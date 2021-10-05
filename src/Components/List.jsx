@@ -2,10 +2,9 @@
 import styles from './list.module.scss';
 
 const List = () => {
-  const handleClick = (number, buttonText) => {
-    // eslint-disable-next-line no-alert
-    window.alert(buttonText);
-  };
+  // eslint-disable-next-line no-alert
+  const handleClick = (number, buttonText) => window.alert(buttonText);
+
   return (
     <>
       <ul className={styles.categories_grid}>
