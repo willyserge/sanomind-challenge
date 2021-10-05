@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "AirbnbCerealBlack";
+    src: local("AirbnbCerealBlack"),
+     url("../assets/fonts/AirbnbCerealBlack.woff") format("truetype");
+    }
+
+@mixin buttonStyle($bgColor) {
+    background: $bgColor;
+    opacity: 1;
+    width:  175px;
+    height: 75px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-family: "AirbnbCerealBlack";
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight:900;
+}
+
+.categories_grid{
+    background-color: rgb(35, 28, 37);
+    display: grid;
+    grid-template-columns: repeat(4, fit-content(8ch));
+    list-style-type: none; 
+    justify-content: center;
+    padding: 20px 0;
+    grid-gap: 10px;
+    @media (max-width: 767px){
+        grid-template-columns: repeat(2, fit-content(8ch));
+    }  
+}
+
+.depression_button{
+    @include buttonStyle(#FF4646 0% 0% no-repeat padding-box);  
+}
+.anxiety_button{
+    @include buttonStyle(#4EEA9C 0% 0% no-repeat padding-box);
+    padding-left:0px;
+}
+.relationships_button{
+    @include buttonStyle(#F070EB 0% 0% no-repeat padding-box);
+}
+.stress_button{
+    @include buttonStyle(#543EFF 0% 0% no-repeat padding-box);
+}
+.life_button{
+    @include buttonStyle(#468DFF 0% 0% no-repeat padding-box);
+}
+.ptsd_button{
+    @include buttonStyle(#64FFF3 0% 0% no-repeat padding-box);
+}
+.adhd_button{
+    @include buttonStyle(#FFC645 0% 0% no-repeat padding-box);
+}
+.parenting_button{
+    @include buttonStyle(#45FF00 0% 0% no-repeat padding-box);
+}
